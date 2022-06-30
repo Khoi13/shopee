@@ -21,6 +21,7 @@ html {
     box-sizing: border-box;
 }
 
+/* Responsive */
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -34,8 +35,24 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
+/* Test */
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12 * 2);
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12 * 10);
+}
+
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -126,6 +143,3 @@ html {
 }
 
 
-.container {
-    height: 50000000px;
-}
