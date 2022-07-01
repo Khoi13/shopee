@@ -126,9 +126,11 @@
                                 </a>
                             </li>
                             <li class="header__navbar-item header__navbar-item--language">
-                                <i class="header__navbar-icon fa-solid fa-globe" style="font-size: 14px; position: relative;"></i>
+                                <i class="header__navbar-icon" style="position: relative; top: 1.8px;">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8.00004C14.6673 4.31814 11.6825 1.33337 8.00065 1.33337C4.31875 1.33337 1.33398 4.31814 1.33398 8.00004C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.33464 8.00004C5.33464 11.6819 6.52854 14.6667 8.0013 14.6667C9.47406 14.6667 10.668 11.6819 10.668 8.00004C10.668 4.31814 9.47406 1.33337 8.0013 1.33337C6.52854 1.33337 5.33464 4.31814 5.33464 8.00004Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.33398 8H14.6673" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </i>
                                 Tiếng Việt
-                                <i class="header__navbar-icon fa-solid fa-chevron-down" style="font-size: 12px"></i>
+                                <i class="header__navbar-icon fa-solid fa-chevron-down" style="font-size: 12px; position: relative; top: 0.6px"></i>
                                 <div class="header__language">
                                     <ul class="header__language-list">
                                         <li class="header__language-item"><a href=""
@@ -335,7 +337,7 @@
 
             <div class="app__container">
                 <div class="grid">
-                    <div class="grid__row">
+                    <div class="grid__row app__content">
                         <div class="grid__column-2">
                             <nav class="category">
                                 <h3 class="category__heading">
@@ -358,7 +360,32 @@
                         </div>
     
                         <div class="grid__column-10">
-    
+                            <div class="home-filter">
+                                <span class="home-filter__label">Sắp xếp theo</span>
+                                <button class="btn btn-special-height-align">Phổ biến</button>
+                                <button class="btn btn--primary btn-special-height-align">Mới nhất</button>
+                                <button class="btn btn-special-height-align">Bán chạy</button>
+
+                                <div class="select-input">
+                                    <span class="select-input__label">Giá</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+
+                                <div class="home-filter__page">
+                                    <span class="home-filter__page-num">
+                                        <span class="home-filter__page-current">1</span>/14
+                                    </span>
+
+                                    <div class="home-filter__page-control">
+                                        <a href="" class="home-filter__page-btn">
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </a>
+                                        <a href="" class="home-filter__page-btn">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

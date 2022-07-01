@@ -994,6 +994,9 @@
     background-color: #f5f5f5;
 }
 
+.app__content {
+    padding-top: 36px;    
+}
 
 .category {
     background-color: var(--white-color);
@@ -1006,7 +1009,7 @@
     color: var(--text-color);
     padding: 12px 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .category__heading-icon {
@@ -1019,7 +1022,6 @@
 .category-list {
     padding:4px 0 4px 0;
     list-style: none;
-    /* margin-top: 0; */
     margin-left: 9px;
 }
 
@@ -1053,4 +1055,18 @@
 .category-item__link:hover {
     right: -2px;
     color: var(--primary-color);
+}
+
+
+/* Home sort + filter */
+.home-filter {
+    padding: 13px 20px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.03);
+    align-items: center;
+}
+
+.home-filter__page {
+    display: flex;
+    align-items: center;
 }
