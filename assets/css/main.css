@@ -1060,10 +1060,24 @@
 
 /* Home sort + filter */
 .home-filter {
+    position: relative;
     padding: 13px 20px;
     display: flex;
     background-color: rgba(0, 0, 0, 0.03);
     align-items: center;
+    border-radius: 2px;
+}
+
+.home-filter__label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #555;
+    margin-right: 16px;
+}
+
+.home-filter__btn {
+    margin-right: 10px;
+    min-width: 90px;
 }
 
 .home-filter__page {

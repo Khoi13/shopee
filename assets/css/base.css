@@ -144,3 +144,69 @@ html {
 }
 
 
+/* Selection */
+
+.select-input {
+    position: relative;
+    padding: 0 12px;
+    height: 34px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: #838383;
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    top: 25px;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    list-style: none;
+    padding-left: 0;
+    padding: 10px 0;
+    display: none;
+    animation: fadeIn ease-in .1s; 
+}
+
+.select-input__list::before {
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -2.5px;
+}
+
+.select-input__link {
+    padding: 9px 16px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}

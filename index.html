@@ -362,13 +362,23 @@
                         <div class="grid__column-10">
                             <div class="home-filter">
                                 <span class="home-filter__label">Sắp xếp theo</span>
-                                <button class="btn btn-special-height-align">Phổ biến</button>
-                                <button class="btn btn--primary btn-special-height-align">Mới nhất</button>
-                                <button class="btn btn-special-height-align">Bán chạy</button>
+                                <button class="btn home-filter__btn btn-special-height-align">Phổ biến</button>
+                                <button class="btn home-filter__btn btn--primary btn-special-height-align">Mới nhất</button>
+                                <button class="btn home-filter__btn btn-special-height-align">Bán chạy</button>
 
                                 <div class="select-input">
                                     <span class="select-input__label">Giá</span>
-                                    <i class="fa-solid fa-angle-down"></i>
+                                    <i class="select-input__icon fa-solid fa-angle-down"></i>
+
+                                    <!-- List options -->
+                                    <ul class="select-input__list">
+                                        <li class="select-input__item">
+                                            <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                        </li>
+                                        <li class="select-input__item">
+                                            <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                        </li>
+                                    </ul>
                                 </div>
 
                                 <div class="home-filter__page">
