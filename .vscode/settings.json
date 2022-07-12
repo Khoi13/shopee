@@ -1,6 +1,4 @@
 {
     "editor.fontLigatures": true,
-    "editor.fontFamily": "Jetbrains mono, 'Courier New', monospace",
-    "git.enableCommitSigning": true,
-    "git.enableSmartCommit": true
+    "editor.fontFamily": "Jetbrains mono, 'Courier New', monospace"
 }
