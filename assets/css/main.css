@@ -1170,9 +1170,9 @@
 }
 
 /* Product item */
-.home-product {
+/* .home-product {
     margin-bottom: 10px;
-}
+} */
 
 .home-product-item {
     display: block;
@@ -1385,4 +1385,9 @@ i.home-product-item__like-icon-empty {
     color: var(--white-color);
     position: relative;
     top: -1.25px;
+}
+
+.home-product__pagination {
+    margin: 40px 0 160px;
+    padding-left: 0;
 }
