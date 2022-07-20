@@ -139,7 +139,6 @@
     margin-left: calc(100% / 12 * 11);
 }
 
-
 /* Tablet - PC low resolotion */
 @media (min-width: 740px) and (max-width: 1023px) {
     .wide {
@@ -163,7 +162,6 @@
         display: none;
     }
 
-    .m-0,
     .m-1,
     .m-2,
     .m-3,
@@ -284,7 +282,7 @@
     }
 }
 
-/* PC low medium and larger*/
+/* PC medium resolution and larger*/
 @media (min-width: 1113px) {
     .row {
         margin-left: -12px;
@@ -310,7 +308,6 @@
         display: none;
     }
 
-    .l-0,
     .l-1,
     .l-2,
     .l-2-4,
@@ -467,7 +464,6 @@
         display: none;
     }
 
-    .wide .l-0,
     .wide .l-1,
     .wide .l-2,
     .wide .l-2-4,

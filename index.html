@@ -146,27 +146,35 @@
                             </li>
                             <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item-separate">Đăng ký</li>
                             <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
-                                <li class="header__navbar-item header__navbar-user">
-                                    <img src="./assets/img/avatar.png" alt="" class="header__navbar-user-img">
-                                    <span class="header__navbar-user-name">Thái Khôi</span>
+                            <li class="header__navbar-item header__navbar-user">
+                                <img src="./assets/img/avatar.png" alt="" class="header__navbar-user-img">
+                                <span class="header__navbar-user-name">Thái Khôi</span>
 
-                                    <ul class="header__navbar-user-menu">
-                                        <li class="header__navbar-user-item">
-                                            <a href="">Tài khoản của tôi</a>
-                                        </li>
-                                        <li class="header__navbar-user-item">
-                                            <a href="">Đơn mua</a>
-                                        </li>
-                                        <li class="header__navbar-user-item header__navbar-user-item--separate">
-                                            <a href="">Đăng xuất</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Đơn mua</a>
+                                    </li>
+                                    <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
 
                     <!-- Header with search -->
                     <div class="header-with-search">
+                        <div class="mobile-header-icon-wrap">
+                            <label for="mobile-menu-checkbox" class="mobile-menu">
+                                <i class="mobile-menu-icon fa-solid fa-bars"></i>
+                            </label>
+                            <label for="mobile-search-checkbox" class="header__mobile-search">
+                                <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
                         <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <svg class="header__logo-img" viewBox="0 0 192 65">
@@ -177,7 +185,7 @@
                             </a>
                         </div>
 
-                        <div class="header__search">
+                        <div class="pc-search hide-on-mobile header__search">
                             <div class="header__search-input-wrap">
                                 <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
 
@@ -194,7 +202,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="header__search-select">
+                            <div onclick="" class="header__search-select">
                                 <span class="header__search-select-label">Trong Shopee</span>
                                 <i class="header__search-select-icon fa-solid fa-angle-down"></i>
                                 <ul class="header__search-option">
@@ -215,7 +223,7 @@
 
                         <!-- Cart layout -->
                         <div class="header__cart">
-                            <div class="header__cart-wrap">
+                            <div onclick="" class="header__cart-wrap">
                                 <!-- <a href="" class="header__cart-link"> -->
                                     <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
                                 <!-- </a>  -->
@@ -375,32 +383,93 @@
                         </div>
                     </div>
                 </div>
-                <ul class="header__sort-bar">
-                    <li class="header__sort-item">
-                        <a href="" class="header__sort-link">Liên quan</a>
-                    </li>
-                    <li class="header__sort-item header__sort-item--active">
-                        <a href="" class="header__sort-link">Mới nhất</a>
-                    </li>
-                    <li class="header__sort-item">
-                        <a href="" class="header__sort-link">Bán chạy</a>
-                    </li>
-                    <li class="header__sort-item">
-                        <a href="" class="header__sort-link">
-                            Giá
-                            <div class="header__sort-price-icon-wrap">
-                                <i class="header__sort-price-icon fa-solid fa-angle-up"></i>
-                                <i class="header__sort-price-icon fa-solid fa-angle-down"></i>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
             </header>
+
+
+            <!-- Menu, sort bar and search in mobile -->
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">
+                        Giá
+                        <div class="header__sort-price-icon-wrap">
+                            <i class="header__sort-price-icon fa-solid fa-angle-up"></i>
+                            <i class="header__sort-price-icon fa-solid fa-angle-down"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <input type="checkbox" hidden id="mobile-menu-checkbox" class="menu-checkbox">
+
+            <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
+            <label for="mobile-menu-checkbox" class="mobile-slide-overlay"></label>
+
+            <ul class="mobile-menu-slide">
+                <li class="mobile-menu-item">
+                    <a href="" class="mobile-menu-item-link">
+                        <div class="mobile-user-wrap">
+                            <img src="./assets/img/avatar.png" alt="" class="mobile-menu-user-img">
+                            <span class="mobile-menu-user-name">Thái Khôi</span>
+                        </div>
+                    </a>
+                    <label for="mobile-menu-checkbox" class="mobile-menu-exit">OK</label>
+                </li>
+                <li class="mobile-menu-item"><a href="" class="mobile-menu-item-link">Tài khoản của tôi</a></li>
+                <li class="mobile-menu-item"><a href="" class="mobile-menu-item-link">Đơn mua</a></li>
+                <li class="mobile-menu-item"><a href="" class="mobile-menu-item-link">Dịch vụ</a></li>
+                <li class="mobile-menu-item"><a href="" class="mobile-menu-item-link">Đăng xuất</a></li>
+            </ul>
+
+            <div id="mobile-search" class="mobile-search header__search">
+                <div class="header__search-input-wrap">
+                    <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+
+                    <!-- Search history -->
+                    <div class="header__search-history">
+                        <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                        <ul class="header__search-history-list">
+                            <li class="header__search-history-item">
+                                <a href="">Muchas gracias aficon, esto es para vosotros</a>
+                            </li>
+                            <li class="header__search-history-item">
+                                <a href="">Laptop gaming ASUS DASH TUF F15 chính hãng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__search-select">
+                    <span class="header__search-select-label">Trong Shopee</span>
+                    <i class="header__search-select-icon fa-solid fa-angle-down"></i>
+                    <ul class="header__search-option">
+                        <li class="header__search-option-item">
+                            <span>Trong Shop này</span>
+                            <i class="fa-solid fa-check"></i>
+                        </li>
+                        <li class="header__search-option-item header__search-option-item--active">
+                            <span>Trong Shopee</span>  
+                            <i class="fa-solid fa-check"></i>
+                        </li>
+                    </ul>
+                </div>
+                <button class="header__search-btn">
+                    <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
 
             <div class="app__container">
                 <div class="grid wide">
-                    <div class="grid__row app__content">
-                        <div class="grid__column-2">
+                    <div class="row sm-gutter app__content">
+                        <div class="col l-2 m-0 c-0">
                             <nav class="category">
                                 <h3 class="category__heading">
                                     Danh Mục
@@ -416,11 +485,17 @@
                                     <li class="category-item">
                                         <a href="#" class="category-item__link">Hàng tiêu dùng</a>
                                     </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">Quần áo</a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">Mỹ phẩm</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
     
-                        <div class="grid__column-10">
+                        <div class="col l-10 m-12 c-12">
                             <div class="home-filter hide-on-mobile-tablet">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="btn home-filter__btn btn-special-height-align">Phổ biến</button>
@@ -458,10 +533,69 @@
                                 </div>
                             </div>
 
+                            <nav class="mobile-category">
+                                <ul class="mobile-category__list">
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                             <div class="home-product">
-                                <div class="grid__row">
+                                <div class="row sm-gutter">
                                     <!-- Product item -->
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -498,7 +632,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -535,7 +669,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -572,7 +706,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -609,7 +743,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -646,7 +780,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -683,7 +817,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -720,7 +854,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -757,7 +891,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -794,7 +928,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -831,7 +965,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -868,7 +1002,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -905,7 +1039,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -942,7 +1076,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -979,7 +1113,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1016,7 +1150,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1053,7 +1187,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1090,7 +1224,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1127,7 +1261,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1164,7 +1298,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1201,7 +1335,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1238,7 +1372,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1275,7 +1409,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1312,7 +1446,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1349,7 +1483,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1386,7 +1520,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1423,7 +1557,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1460,7 +1594,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1497,7 +1631,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1534,7 +1668,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1571,7 +1705,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1608,7 +1742,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1645,7 +1779,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1682,7 +1816,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1719,7 +1853,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1756,7 +1890,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1793,7 +1927,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1830,7 +1964,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1867,7 +2001,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1904,7 +2038,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1941,7 +2075,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -1978,7 +2112,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2015,7 +2149,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2052,7 +2186,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2089,7 +2223,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2126,7 +2260,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2163,7 +2297,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2200,7 +2334,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2237,7 +2371,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2274,7 +2408,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/229c0d07d4580d4e2424a6277553ac18_tn);"></div>
                                             <h4 class="home-product-item__name">Rubik Gan 11 M Pro / Gan 11 M Duo 3x3 Rubik Nam Châm 3 Tầng Cao Cấp Flagship Gan11 M Pro/Duo</h4>
@@ -2352,8 +2486,8 @@
 
             <footer class="footer">
                 <div class="grid wide">
-                    <div class="grid__row">
-                        <div class="grid__column-2-4">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-12">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -2388,7 +2522,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-12 mobile-footer-heading">
                             <h3 class="footer__heading">Về Shopee</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -2420,7 +2554,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-12 mobile-footer-heading">
                             <h3 class="footer__heading">Thanh toán</h3>
                             <div class="footer__pay">
                                 <ul class="footer-list">
@@ -2442,7 +2576,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-12 mobile-footer-heading">
                             <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -2465,7 +2599,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-8 c-12 mobile-footer-heading">
                             <h3 class="footer__heading">Tải ứng dụng Shopee ngay thôi</h3> 
                             <div class="footer__download">
                                 <img class="footer__download-qr" src="./assets/img/qr_code.png" alt="QR">

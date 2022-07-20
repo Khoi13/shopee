@@ -243,6 +243,7 @@ html {
     user-select: none;
     background-color: var(--primary-color);
     color: var(--white-color);
+    -webkit-user-select: none;
 }
 
 .pagination-item--active:hover {
