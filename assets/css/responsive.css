@@ -58,6 +58,9 @@
     .app__content {
         padding-top: 8px;
     }
+    .cart-open {
+        display: block;
+    }
 }
 
 
@@ -215,4 +218,11 @@
         margin-top: 10px;
         padding: 2px 0;
     }
+}
+
+@media screen and (minwidth: 1024px) { 
+.header__cart-wrap:hover .header__cart-sub-link,
+.header__cart-wrap:hover .header__cart-list {
+    display: block;
+}
 }

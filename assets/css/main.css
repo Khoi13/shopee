@@ -669,10 +669,6 @@
     margin-top: 6px;
 }
 
-.header__cart-wrap:hover .header__cart-sub-link,
-.header__cart-wrap:hover .header__cart-list {
-    display: block;
-}
 
 .header__cart-list {
     position: absolute;
